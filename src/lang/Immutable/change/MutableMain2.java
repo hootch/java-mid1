@@ -1,10 +1,11 @@
 package lang.Immutable.change;
 
-public class MutableMain {
+public class MutableMain2 {
     public static void main(String[] args) {
-        MutableObj obj = new MutableObj(10);
-        obj.add(20);;
-        System.out.println("obj : " + obj.getValue());
+        ImmutableObj obj1 = new ImmutableObj(10);
+        obj1.add(20);
+
+        System.out.println("obj1 : " + obj1.getValue());
 
 
     }

@@ -1,7 +1,9 @@
-package lang.object.poly;
+package lang.object.tostring;
 
 public class Car {
-    public void move(){
-        System.out.println("움직임");
+    private String carName;
+
+    public Car(String carName) {
+        this.carName = carName;
     }
 }

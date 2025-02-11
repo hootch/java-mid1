@@ -2,12 +2,16 @@ package lang.Immutable.address;
 
 import java.util.Objects;
 
-public class MemberV1 {
+public class MemberV2 {
     private String name;
-    private Address address;
+    private ImmutableAddress address;
 
-    public MemberV1(String name, Address address) {
+    public MemberV2(String name, ImmutableAddress address) {
         this.name = name;
+        this.address = address;
+    }
+
+    public void setAddress(ImmutableAddress address) {
         this.address = address;
     }
 
@@ -15,7 +19,7 @@ public class MemberV1 {
         return name;
     }
 
-    public Address getAddress() {
+    public ImmutableAddress getAddress() {
         return address;
     }
 
@@ -23,14 +27,11 @@ public class MemberV1 {
         this.name = name;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        MemberV1 memberV1 = (MemberV1) o;
+        MemberV2 memberV1 = (MemberV2) o;
         return Objects.equals(name, memberV1.name) && Objects.equals(address, memberV1.address);
     }
 

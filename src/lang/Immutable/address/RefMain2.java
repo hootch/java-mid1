@@ -1,17 +1,15 @@
 package lang.Immutable.address;
 
-public class RefMain1_3 {
+public class RefMain2 {
     public static void main(String[] args) {
-        Address a = new Address("스울");
-        Address b = a;
+        ImmutableAddress a = new ImmutableAddress("스울");
+        ImmutableAddress b = a;
         System.out.println(a + " " + b);
 
-        change(b, "푸산");
-
+//        b.setValue("부산");
         System.out.println(a + " " + b);
+        ImmutableAddress c = new ImmutableAddress("푸산");
+        System.out.println(a + " " + c);
     }
 
-    private static void change (Address addr, String changeAddr){
-        addr.setValue(changeAddr);
-    }
 }

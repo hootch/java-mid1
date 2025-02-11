@@ -1,7 +1,7 @@
 package lang.Immutable.address;
 
-public class Address {
-    private String value;
+public class ImmutableAddress {
+    private final String value;
 
     @Override
     public String toString() {
@@ -10,15 +10,11 @@ public class Address {
                 '}';
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
-
     public String getValue() {
         return value;
     }
 
-    public Address(String value) {
+    public ImmutableAddress(String value) {
         this.value = value;
     }
 }
