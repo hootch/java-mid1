@@ -10,7 +10,16 @@ public class StringBuilderMain1_1 {
         System.out.println(sb);
 
         sb.insert(2, "JAVA");
-
         System.out.println(sb);
+
+        sb.delete(4,8);
+        System.out.println(sb);
+
+        sb.reverse();
+        System.out.println(sb);
+
+        //StringBuild -> String
+        String string =  sb.toString();
+        System.out.println(string);
     }
 }
